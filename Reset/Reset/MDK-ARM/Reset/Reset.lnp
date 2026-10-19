@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"reset\startup_stm32f103xb.o"
+"reset\main.o"
+"reset\gpio.o"
+"reset\spi.o"
+"reset\usart.o"
+"reset\stm32f1xx_it.o"
+"reset\stm32f1xx_hal_msp.o"
+"reset\stm32f1xx_hal_gpio_ex.o"
+"reset\stm32f1xx_hal_spi.o"
+"reset\stm32f1xx_hal.o"
+"reset\stm32f1xx_hal_rcc.o"
+"reset\stm32f1xx_hal_rcc_ex.o"
+"reset\stm32f1xx_hal_gpio.o"
+"reset\stm32f1xx_hal_dma.o"
+"reset\stm32f1xx_hal_cortex.o"
+"reset\stm32f1xx_hal_pwr.o"
+"reset\stm32f1xx_hal_flash.o"
+"reset\stm32f1xx_hal_flash_ex.o"
+"reset\stm32f1xx_hal_exti.o"
+"reset\stm32f1xx_hal_uart.o"
+"reset\system_stm32f1xx.o"
+"reset\int_bootloader.o"
+"reset\app_bootloader.o"
+--library_type=microlib --strict --scatter "Reset\Reset.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Reset.map" -o Reset\Reset.axf

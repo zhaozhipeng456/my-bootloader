@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"app01\startup_stm32f103xb.o"
+"app01\main.o"
+"app01\gpio.o"
+"app01\spi.o"
+"app01\usart.o"
+"app01\stm32f1xx_it.o"
+"app01\stm32f1xx_hal_msp.o"
+"app01\stm32f1xx_hal_gpio_ex.o"
+"app01\stm32f1xx_hal_spi.o"
+"app01\stm32f1xx_hal.o"
+"app01\stm32f1xx_hal_rcc.o"
+"app01\stm32f1xx_hal_rcc_ex.o"
+"app01\stm32f1xx_hal_gpio.o"
+"app01\stm32f1xx_hal_dma.o"
+"app01\stm32f1xx_hal_cortex.o"
+"app01\stm32f1xx_hal_pwr.o"
+"app01\stm32f1xx_hal_flash.o"
+"app01\stm32f1xx_hal_flash_ex.o"
+"app01\stm32f1xx_hal_exti.o"
+"app01\stm32f1xx_hal_uart.o"
+"app01\system_stm32f1xx.o"
+"app01\int_w25q64.o"
+"app01\app_upgrade.o"
+--library_type=microlib --strict --scatter "App01\App02.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "App02.map" -o App01\App02.axf
